@@ -26,6 +26,7 @@ void	*bubblesort(void *base, size_t num, size_t width, int (*cmp)(const void *, 
 			}
 		}
 	}
+	free(tmp);
 	return (base);
 }
 
