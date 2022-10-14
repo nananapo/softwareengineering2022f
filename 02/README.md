@@ -29,6 +29,7 @@ $ make hash
 
 #### change option
 
+edit Makefile
 ```makefile
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -fsanitize=address
