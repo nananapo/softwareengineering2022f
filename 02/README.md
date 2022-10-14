@@ -38,7 +38,7 @@ DELTA=2
 ...
 ```
 
-### Usage
+#### Usage
 ```sh
 $ ./hash 15 13 14 1 7 0 9 2 3
 Key? 1
