@@ -1,8 +1,8 @@
-## sort
+# sort
 
 file : sort.cc
 
-#### example output
+### example output
 ```sh
 $ make
 $ ./sort 100000
@@ -13,34 +13,43 @@ Count: 3 ms
 Radix: 300263 ms
 ```
 
-** Radix sort is too slow! **
+**Radix sort is too slow!**
 
-#### insertion sort
+## insertion sort
 
-function : void insertSort()
-stable : Yes
-time complexity : O(N^2)
+| | |
+| ---- | ---- |
+|function | insertSort|
+|stable | Yes|
+|time complexity | O(N^2)|
 
-#### quick sort
+## quick sort
 
-function : quickSort
-stable : No
-worst time comlexity : O(N^2)
-avg time complextity : O(NlogN)
+| | |
+| ---- | ---- |
+|function | quickSort |
+|stable | No |
+|worst time comlexity | O(N^2) |
+|avg time complextity | O(NlogN) |
 
 This implementation of quick sort is not a stable sort.
+
 Because the partition() swaps values.
 
-#### counting sort
+## counting sort
 
-function : countSort
-time complexity : O(N)
-space complexity : O(N)
+| | |
+| ---- | ---- |
+|function | countSort|
+|time complexity | O(N)|
+|space complexity | O(N)|
 
-#### Radix sort
+## Radix sort
 
-function : radixSort
-time complexity : 入力がn個のd桁の数の時、挿入ソートしているのでO(d(N^2))
+| | |
+| ---- | ---- |
+|function | radixSort|
+|time complexity | 入力がn個のd桁の数の時、挿入ソートしているのでΘ(d(N^2))くらい|
 
 ```cpp
 void stableSortK(std::vector<int>& arr, int k)
