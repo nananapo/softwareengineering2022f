@@ -3,3 +3,4 @@
 *.swp
 *.dSYM
 *.o
+.DS_Store
