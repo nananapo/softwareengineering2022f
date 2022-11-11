@@ -95,6 +95,29 @@ alloc_leaf(NODE *parent)
 	return node;
 }
 
+TEMP *
+alloc_temp(void)
+{
+	TEMP *temp;
+	
+	if (!(temp = (TEMP *)calloc(1, sizeof(TEMP)))) ERR;
+	temp->isLeaf = true;
+	temp->nkey = 0;
+	return temp;
+}
+
+void	leaf_split(NODE *leaf, int key, DATA *data)
+{
+	TEMP	*T;
+	NODE	*Ld;
+	Ld = alloc_lead(leaf->parent);
+	T = alloc_temp();
+
+	for (T->nkey=0; T->nkey < leaf->nkey; T->nkey++)
+		T->key[T->nkey] = leaf->key[T->nkey];
+	T->key[T->nkey++] = key;
+}
+
 void 
 insert(int key, DATA *data)
 {
@@ -110,8 +133,8 @@ insert(int key, DATA *data)
 	if (leaf->nkey < (N-1)) {
 		insert_in_leaf(leaf, key, data);
 	}
-	else { // split
-    // future work
+	else {
+		lead_split(leaf, key, data);
 	}
 }
 
