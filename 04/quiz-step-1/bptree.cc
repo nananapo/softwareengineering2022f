@@ -307,7 +307,7 @@ main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("Usage %s size\n", argv[0]);
+		printf("Usage : %s size\n", argv[0]);
 		return 0;
 	}
 	int size = atoi(argv[1]);
