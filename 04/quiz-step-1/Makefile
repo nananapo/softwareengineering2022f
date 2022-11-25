@@ -2,6 +2,8 @@ T1 = bptree
 
 CC = g++
 CFLAGS = -g -c -Wall -O2
+# -fsanitize=address
+# -fno-omit-frame-pointer
 LDFLAGS = -lm -pthread 
 
 OBJ_T1 = bptree.o

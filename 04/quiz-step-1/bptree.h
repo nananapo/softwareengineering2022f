@@ -19,8 +19,8 @@ typedef struct _DATA {
 
 typedef struct _NODE {
 	bool isLeaf;
-	struct _NODE *chi[N];
-	int key[N-1]; 
+	struct _NODE *chi[N+1];
+	int key[N]; 
 	int nkey;
 	struct _NODE *parent;
 } NODE;
